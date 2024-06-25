@@ -22,7 +22,7 @@ Run `python simEvolution_clustered_network.py -[parameter] value` to run the sim
 - numCores - number of cores to use
 - logName - name of the log file
 
-### Steps to reproduce the results of Table 1 (Fig. 1):
+### Steps to reproduce the results of Fig. 3:
 
 Run `python simEvolution_clustered_network.py -m 0`
 
@@ -36,4 +36,8 @@ Run `python simEvolution_clustered_network.py -m 0.5`
 
 Run `python simEvolution_clustered_network.py -m 7`
 
-This will yield the probabilities of emergence and the epidemic size of each strain for each value of the \lambda parameter.
+This will yield the probabilities of emergence and the epidemic size of each strain for each value of the \lambda parameter. 
+This same code can be used to reproduce the simulations in Figures 5 and 6 by setting the values (t1,t2,m1,m2) appropriately.
+
+### Steps to reproduce the results of Fig. 4:
+
