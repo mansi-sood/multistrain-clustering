@@ -36,4 +36,4 @@ Run `python simEvolution_clustered_network.py -m 0.5`
 
 Run `python simEvolution_clustered_network.py -m 7`
 
-_You'll get the probabilities of emergence and the epidemic size of each strain for each value of m._
+This will yield the probabilities of emergence and the epidemic size of each strain for each value of the \lambda parameter.
