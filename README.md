@@ -41,6 +41,8 @@ This same code can be used to reproduce the simulations in Figures 4 and 5 by se
 
 ### Steps to reproduce the results of Fig. 6:
 update the create network function as below:
+
+```python
 # Create a random clustered graph based on given node degrees
 def create_network(c, lambda_, num_nodes):
     # Ensure the number of single edges is even
