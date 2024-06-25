@@ -37,7 +37,24 @@ Run `python simEvolution_clustered_network.py -m 0.5`
 Run `python simEvolution_clustered_network.py -m 7`
 
 This will yield the probabilities of emergence and the epidemic size of each strain for each value of the \lambda parameter. 
-This same code can be used to reproduce the simulations in Figures 5 and 6 by setting the values (t1,t2,m1,m2) appropriately.
+This same code can be used to reproduce the simulations in Figures 4 and 5 by setting the values (t1,t2,m1,m2) appropriately.
 
-### Steps to reproduce the results of Fig. 4:
+### Steps to reproduce the results of Fig. 6:
+update the create network function as below:
+# Create a random clustered graph based on given node degrees
+def create_network(c, lambda_, num_nodes):
+    # Ensure the number of single edges is even
+    while True:
+        single_edges = 2 * np.random.poisson((4 - c) / 2 * lambda_, num_nodes)
+        if np.sum(single_edges) % 2 == 0:
+            break
+    # Ensure the number of triangle edges is a multiple of 3
+    while True:
+        triangle_edges = np.random.poisson(c / 2 * lambda_, num_nodes)
+        if np.sum(triangle_edges) % 3 == 0:
+            break
+
+    deg_seq = [(i, j) for i, j in zip(single_edges, triangle_edges)]
+    return nx.random_clustered_graph(deg_seq)
+
 
