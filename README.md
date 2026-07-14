@@ -67,3 +67,9 @@ Run `python simEvolution_clustered_network_with_c_lambda.py -c 0.01 -l 5.0`
 ...
 
 Run `python simEvolution_clustered_network_with_c_lambda.py -c 3.99 -l 5.0`
+
+### Steps to reproduce the results of Fig. 9:
+Run `python heavy-tail.py` to simulate multi-strain spreading on a power-law degree distributed network and produce the emergence/size probability curves.
+
+### Steps to reproduce the results of Fig. 10:
+Run `python real-world.py` to plot the theoretical predictions against experimental results on the real-world Twitch (PTBR) network.
