@@ -1,3 +1,5 @@
+# Twitch Gamers PTBR network from SNAP
+# Source: https://snap.stanford.edu/data/twitch-social-networks.html
 import collections
 import random
 import sys
@@ -29,6 +31,8 @@ C62 = 2 * (T2 * u21 * T2 * u22 + T2 * u21 * (1 - T2) * T1 * u12 + T2 * u22 * (1 
 
 Pi = np.array([[T1 * u11, T1 * u12], [T2 * u21, T2 * u22]])
 T_BP = float(max(abs(LA.eigvals(Pi))))
+
+
 
 
 def thin_to_mean_degree(G, target_lambda, rng):
